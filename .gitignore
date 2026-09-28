@@ -1,0 +1,8 @@
+reviewer_packets/
+submissions/
+real_data/
+DEV-*_packet.json
+DEV-*_submission.json
+*.real.json
+.DS_Store
+node_modules/

@@ -1,0 +1,568 @@
+{
+  "schema_version": "nnas-eval-reviewer-packet/1",
+  "assignment_id": "FABRICATED-temporal",
+  "reviewer_id": "fictional-reviewer-1",
+  "binding": {
+    "task_id": "REVIEW-FIXTURE",
+    "task_fingerprint": "51decd6690a0a42c872ab83cf8c758236da16b9345635e3dd9d158d9d99ba1fd",
+    "model_visible_task_fingerprint": "ea2c0eda806fa119b41e5760be358a9f7851f49e01f6f76042ce415cba9d6ca3",
+    "projection_version": "nnas-eval-review-projection/1",
+    "projection_fingerprint": "bb35d3fd2a3601a6d94251f558803d51ba619d792f7697ca6069132511dc7d6e",
+    "evaluation_record_fingerprint": "9bed62af4f15060c29e7449ff5210ff7c240fac07ab428e85b7a6c02e34783a0",
+    "run_id": "fabricated-temporal",
+    "response_fingerprint": "f012588c94d1b36df827d3e43799fe04253413bc33d68b112afe7cb2945b5cae",
+    "procedure_version": "nnas-eval-human-review/1",
+    "procedure_document_sha256": "d1fa981517aee999267483dec14d3451f4c1c09ba744a2e071752ae6b14f23b8",
+    "rubric_version": "review-fixture-rubric-1",
+    "rubric_fingerprint": "9813ea955492cabe3da8fe37b7073d87df6d0e9de6512269601e547b1fe1d2d5",
+    "annotation_version": "nnas-pilot-annotation/1",
+    "annotation_fingerprint": "83e0976280956385988fff35acd73156d0d27b906e278181f98b34748aaec689",
+    "scoring_fingerprint": "601e59bd8e9ec98c4d0827d3ade673ea42d920be7db3eb40b76cf203335b9225"
+  },
+  "reviewer_view": {
+    "answer_available_for_semantic_review": true,
+    "claim_inventory": [
+      {
+        "model_claim": {
+          "claim_id": "time-claim",
+          "source_refs": [],
+          "text": "Art Club holds Room 1 before noon."
+        },
+        "position": 0,
+        "record_claim_id": "time-claim",
+        "record_source_refs": [],
+        "record_text": "Art Club holds Room 1 before noon."
+      }
+    ],
+    "model_visible_context": [
+      {
+        "document_id": "facts",
+        "source_event_id": "fixture-source-0",
+        "text": "Valve V is blue. Valve V weighs two kilograms. Valve V is brass.",
+        "version": "1"
+      },
+      {
+        "document_id": "rule",
+        "source_event_id": "fixture-source-1",
+        "text": "All brass valves conduct heat.",
+        "version": "1"
+      },
+      {
+        "document_id": "old",
+        "source_event_id": "fixture-source-2",
+        "text": "Withdrawn notice: Valve V has code R.",
+        "version": "1"
+      },
+      {
+        "document_id": "alpha",
+        "source_event_id": "fixture-source-3",
+        "text": "Lab Alpha reports Sample Q contains copper.",
+        "version": "1"
+      },
+      {
+        "document_id": "beta",
+        "source_event_id": "fixture-source-4",
+        "text": "Lab Beta reports Sample Q contains no copper.",
+        "version": "1"
+      },
+      {
+        "document_id": "mass",
+        "source_event_id": "fixture-source-5",
+        "text": "Parcel Z has no retained exact mass reading.",
+        "version": "1"
+      },
+      {
+        "document_id": "policy",
+        "source_event_id": "fixture-source-6",
+        "text": "Only the safety officer may use the reset switch. A reset restores monitoring.",
+        "version": "1"
+      },
+      {
+        "document_id": "time",
+        "source_event_id": "fixture-source-7",
+        "text": "Art Club holds Room 1 before noon.",
+        "version": "1"
+      }
+    ],
+    "model_visible_system_prompt": null,
+    "model_visible_task": {
+      "corpus_snapshot_id": "review-fixture-snapshot-1",
+      "documents": [
+        {
+          "document_id": "facts",
+          "text": "Valve V is blue. Valve V weighs two kilograms. Valve V is brass.",
+          "version": "1"
+        },
+        {
+          "document_id": "rule",
+          "text": "All brass valves conduct heat.",
+          "version": "1"
+        },
+        {
+          "document_id": "old",
+          "text": "Withdrawn notice: Valve V has code R.",
+          "version": "1"
+        },
+        {
+          "document_id": "alpha",
+          "text": "Lab Alpha reports Sample Q contains copper.",
+          "version": "1"
+        },
+        {
+          "document_id": "beta",
+          "text": "Lab Beta reports Sample Q contains no copper.",
+          "version": "1"
+        },
+        {
+          "document_id": "mass",
+          "text": "Parcel Z has no retained exact mass reading.",
+          "version": "1"
+        },
+        {
+          "document_id": "policy",
+          "text": "Only the safety officer may use the reset switch. A reset restores monitoring.",
+          "version": "1"
+        },
+        {
+          "document_id": "time",
+          "text": "Art Club holds Room 1 before noon.",
+          "version": "1"
+        }
+      ],
+      "information_boundary": {
+        "instruction": "Use only the supplied snapshot.",
+        "policy_version": "snapshot-only-1",
+        "scope": "supplied_snapshot_only"
+      },
+      "query_at": "2026-09-27T13:00:00Z",
+      "question": "Describe the requested facts, source disagreements, missing measurements and role permission using this fabricated snapshot.",
+      "schema_version": "nnas-pilot-visible/1",
+      "task_id": "REVIEW-FIXTURE"
+    },
+    "model_visible_task_raw_text": "{\"corpus_snapshot_id\":\"review-fixture-snapshot-1\",\"documents\":[{\"document_id\":\"facts\",\"text\":\"Valve V is blue. Valve V weighs two kilograms. Valve V is brass.\",\"version\":\"1\"},{\"document_id\":\"rule\",\"text\":\"All brass valves conduct heat.\",\"version\":\"1\"},{\"document_id\":\"old\",\"text\":\"Withdrawn notice: Valve V has code R.\",\"version\":\"1\"},{\"document_id\":\"alpha\",\"text\":\"Lab Alpha reports Sample Q contains copper.\",\"version\":\"1\"},{\"document_id\":\"beta\",\"text\":\"Lab Beta reports Sample Q contains no copper.\",\"version\":\"1\"},{\"document_id\":\"mass\",\"text\":\"Parcel Z has no retained exact mass reading.\",\"version\":\"1\"},{\"document_id\":\"policy\",\"text\":\"Only the safety officer may use the reset switch. A reset restores monitoring.\",\"version\":\"1\"},{\"document_id\":\"time\",\"text\":\"Art Club holds Room 1 before noon.\",\"version\":\"1\"}],\"information_boundary\":{\"instruction\":\"Use only the supplied snapshot.\",\"policy_version\":\"snapshot-only-1\",\"scope\":\"supplied_snapshot_only\"},\"query_at\":\"2026-09-27T13:00:00Z\",\"question\":\"Describe the requested facts, source disagreements, missing measurements and role permission using this fabricated snapshot.\",\"schema_version\":\"nnas-pilot-visible/1\",\"task_id\":\"REVIEW-FIXTURE\"}",
+    "raw_structured_relationship": "separate_or_unparsed_representations",
+    "raw_visible_output": "Art Club holds Room 1 before noon at the query time.",
+    "recorded_citations": [],
+    "recorded_response": {
+      "claims": [
+        {
+          "claim_id": "time-claim",
+          "source_refs": [],
+          "text": "Art Club holds Room 1 before noon."
+        }
+      ],
+      "outcome": "answered",
+      "reason": "Fabricated answer; no generation."
+    },
+    "reference_inventory": [
+      {
+        "claim_position": 0,
+        "raw_reference": null,
+        "reference_position": null,
+        "representation": "model_structure",
+        "state": "none"
+      }
+    ],
+    "structured_output": {
+      "claims": [
+        {
+          "claim_id": "time-claim",
+          "source_refs": [],
+          "text": "Art Club holds Room 1 before noon."
+        }
+      ],
+      "reason": "Fabricated answer; no generation."
+    }
+  },
+  "hidden_annotation": {
+    "schema_version": "nnas-pilot-annotation/1",
+    "task_id": "REVIEW-FIXTURE",
+    "task_fingerprint": "51decd6690a0a42c872ab83cf8c758236da16b9345635e3dd9d158d9d99ba1fd",
+    "rubric": {
+      "schema_version": "nnas-pilot-rubric/1",
+      "rubric_id": "review-fixture",
+      "version": "review-fixture-rubric-1",
+      "policy_text": "Authored review fixtures only; apply frozen nnas-eval-scoring/1."
+    },
+    "source_states": [
+      {
+        "document_id": "facts",
+        "version": "1",
+        "at_query": "current",
+        "dependence_status": "unknown",
+        "dependence_group": null,
+        "reason": "Authored snapshot state."
+      },
+      {
+        "document_id": "rule",
+        "version": "1",
+        "at_query": "current",
+        "dependence_status": "unknown",
+        "dependence_group": null,
+        "reason": "Authored snapshot state."
+      },
+      {
+        "document_id": "old",
+        "version": "1",
+        "at_query": "withdrawn",
+        "dependence_status": "unknown",
+        "dependence_group": null,
+        "reason": "Authored snapshot state."
+      },
+      {
+        "document_id": "alpha",
+        "version": "1",
+        "at_query": "current",
+        "dependence_status": "unknown",
+        "dependence_group": null,
+        "reason": "Authored snapshot state."
+      },
+      {
+        "document_id": "beta",
+        "version": "1",
+        "at_query": "current",
+        "dependence_status": "unknown",
+        "dependence_group": null,
+        "reason": "Authored snapshot state."
+      },
+      {
+        "document_id": "mass",
+        "version": "1",
+        "at_query": "current",
+        "dependence_status": "unknown",
+        "dependence_group": null,
+        "reason": "Authored snapshot state."
+      },
+      {
+        "document_id": "policy",
+        "version": "1",
+        "at_query": "current",
+        "dependence_status": "unknown",
+        "dependence_group": null,
+        "reason": "Authored snapshot state."
+      },
+      {
+        "document_id": "time",
+        "version": "1",
+        "at_query": "current",
+        "dependence_status": "unknown",
+        "dependence_group": null,
+        "reason": "Authored snapshot state."
+      }
+    ],
+    "spans": [
+      {
+        "span_id": "blue",
+        "document_id": "facts",
+        "version": "1",
+        "start": 0,
+        "end": 16,
+        "quote": "Valve V is blue.",
+        "source_statement": "Valve V is blue.",
+        "admissibility": "admissible",
+        "reason": "Authored snapshot-policy eligibility."
+      },
+      {
+        "span_id": "weight",
+        "document_id": "facts",
+        "version": "1",
+        "start": 17,
+        "end": 46,
+        "quote": "Valve V weighs two kilograms.",
+        "source_statement": "Valve V weighs two kilograms.",
+        "admissibility": "admissible",
+        "reason": "Authored snapshot-policy eligibility."
+      },
+      {
+        "span_id": "heat-rule",
+        "document_id": "rule",
+        "version": "1",
+        "start": 0,
+        "end": 30,
+        "quote": "All brass valves conduct heat.",
+        "source_statement": "All brass valves conduct heat.",
+        "admissibility": "admissible",
+        "reason": "Authored snapshot-policy eligibility."
+      },
+      {
+        "span_id": "old-code",
+        "document_id": "old",
+        "version": "1",
+        "start": 18,
+        "end": 37,
+        "quote": "Valve V has code R.",
+        "source_statement": "Valve V has code R.",
+        "admissibility": "inadmissible",
+        "reason": "Authored snapshot-policy eligibility."
+      },
+      {
+        "span_id": "copper",
+        "document_id": "alpha",
+        "version": "1",
+        "start": 18,
+        "end": 43,
+        "quote": "Sample Q contains copper.",
+        "source_statement": "Sample Q contains copper.",
+        "admissibility": "admissible",
+        "reason": "Authored snapshot-policy eligibility."
+      },
+      {
+        "span_id": "no-copper",
+        "document_id": "beta",
+        "version": "1",
+        "start": 17,
+        "end": 45,
+        "quote": "Sample Q contains no copper.",
+        "source_statement": "Sample Q contains no copper.",
+        "admissibility": "admissible",
+        "reason": "Authored snapshot-policy eligibility."
+      },
+      {
+        "span_id": "mass-missing",
+        "document_id": "mass",
+        "version": "1",
+        "start": 0,
+        "end": 44,
+        "quote": "Parcel Z has no retained exact mass reading.",
+        "source_statement": "Parcel Z has no retained exact mass reading.",
+        "admissibility": "admissible",
+        "reason": "Authored snapshot-policy eligibility."
+      },
+      {
+        "span_id": "officer",
+        "document_id": "policy",
+        "version": "1",
+        "start": 0,
+        "end": 49,
+        "quote": "Only the safety officer may use the reset switch.",
+        "source_statement": "Only the safety officer may use the reset switch.",
+        "admissibility": "admissible",
+        "reason": "Authored snapshot-policy eligibility."
+      },
+      {
+        "span_id": "effect",
+        "document_id": "policy",
+        "version": "1",
+        "start": 50,
+        "end": 78,
+        "quote": "A reset restores monitoring.",
+        "source_statement": "A reset restores monitoring.",
+        "admissibility": "admissible",
+        "reason": "Authored snapshot-policy eligibility."
+      },
+      {
+        "span_id": "booking",
+        "document_id": "time",
+        "version": "1",
+        "start": 0,
+        "end": 34,
+        "quote": "Art Club holds Room 1 before noon.",
+        "source_statement": "Art Club holds Room 1 before noon.",
+        "admissibility": "inadmissible",
+        "reason": "Authored snapshot-policy eligibility."
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "ref-blue",
+        "text": "Valve V is blue.",
+        "evidence_status": "supported",
+        "origin": "source_statement",
+        "span_judgments": [
+          {
+            "span_id": "blue",
+            "relation": "supports",
+            "reason": "Authored evidence relationship."
+          }
+        ],
+        "temporal_applicability": "applicable",
+        "answer_relevance": "required",
+        "reason": "Authored reference proposition."
+      },
+      {
+        "claim_id": "ref-weight",
+        "text": "Valve V weighs two kilograms.",
+        "evidence_status": "supported",
+        "origin": "source_statement",
+        "span_judgments": [
+          {
+            "span_id": "weight",
+            "relation": "supports",
+            "reason": "Authored evidence relationship."
+          }
+        ],
+        "temporal_applicability": "applicable",
+        "answer_relevance": "required",
+        "reason": "Authored reference proposition."
+      },
+      {
+        "claim_id": "copper-yes",
+        "text": "Sample Q contains copper.",
+        "evidence_status": "unresolved",
+        "origin": "unresolved",
+        "span_judgments": [
+          {
+            "span_id": "copper",
+            "relation": "related_only",
+            "reason": "Authored evidence relationship."
+          }
+        ],
+        "temporal_applicability": "applicable",
+        "answer_relevance": "optional",
+        "reason": "Authored reference proposition."
+      },
+      {
+        "claim_id": "copper-no",
+        "text": "Sample Q contains no copper.",
+        "evidence_status": "unresolved",
+        "origin": "unresolved",
+        "span_judgments": [
+          {
+            "span_id": "no-copper",
+            "relation": "related_only",
+            "reason": "Authored evidence relationship."
+          }
+        ],
+        "temporal_applicability": "applicable",
+        "answer_relevance": "optional",
+        "reason": "Authored reference proposition."
+      },
+      {
+        "claim_id": "exact-z",
+        "text": "Parcel Z has a specified exact mass.",
+        "evidence_status": "not_answerable",
+        "origin": "unresolved",
+        "span_judgments": [
+          {
+            "span_id": "mass-missing",
+            "relation": "related_only",
+            "reason": "Authored evidence relationship."
+          }
+        ],
+        "temporal_applicability": "applicable",
+        "answer_relevance": "optional",
+        "reason": "Authored reference proposition."
+      },
+      {
+        "claim_id": "ref-effect",
+        "text": "A reset restores monitoring.",
+        "evidence_status": "supported",
+        "origin": "source_statement",
+        "span_judgments": [
+          {
+            "span_id": "effect",
+            "relation": "supports",
+            "reason": "Authored evidence relationship."
+          }
+        ],
+        "temporal_applicability": "applicable",
+        "answer_relevance": "optional",
+        "reason": "Authored reference proposition."
+      },
+      {
+        "claim_id": "ref-permission",
+        "text": "The clerk may not reset the switch.",
+        "evidence_status": "supported",
+        "origin": "source_statement",
+        "span_judgments": [
+          {
+            "span_id": "officer",
+            "relation": "supports",
+            "reason": "Authored evidence relationship."
+          }
+        ],
+        "temporal_applicability": "applicable",
+        "answer_relevance": "optional",
+        "reason": "Authored reference proposition."
+      }
+    ],
+    "missing_information": [
+      {
+        "item_id": "copper-resolution-yes",
+        "description": "Resolve conflicting copper reports.",
+        "needed_for_claim_id": "copper-yes"
+      },
+      {
+        "item_id": "copper-resolution-no",
+        "description": "Resolve conflicting copper reports.",
+        "needed_for_claim_id": "copper-no"
+      },
+      {
+        "item_id": "z-reading",
+        "description": "Exact mass of Parcel Z.",
+        "needed_for_claim_id": "exact-z"
+      }
+    ],
+    "abstentions": [
+      {
+        "claim_id": "copper-yes",
+        "acceptable": true,
+        "reason": "Missing determination."
+      },
+      {
+        "claim_id": "copper-no",
+        "acceptable": true,
+        "reason": "Missing determination."
+      },
+      {
+        "claim_id": "exact-z",
+        "acceptable": true,
+        "reason": "Missing determination."
+      }
+    ],
+    "authority": {
+      "status": "denied",
+      "actor": "shift clerk",
+      "action": "use the reset switch",
+      "reason": "Authored role policy reserves use for officer."
+    },
+    "process": [
+      {
+        "annotator_id": "fixture-author",
+        "round": 1,
+        "mode": "assisted",
+        "rubric_version": "review-fixture-rubric-1",
+        "uncertainty": "low",
+        "disagreement": "not_applicable",
+        "resolution": null,
+        "notes": "Fabricated annotation, no actual human review."
+      }
+    ],
+    "adjudication_status": "not_required",
+    "notes": "Synthetic review micro-world; no DEV output.",
+    "question_targets": [
+      {
+        "schema_version": "nnas-pilot-question-target/1",
+        "target_id": "copper-target",
+        "requested_information": "Whether Sample Q contains copper.",
+        "kind": "competing_candidates",
+        "candidate_claim_ids": [
+          "copper-yes",
+          "copper-no"
+        ],
+        "missing_information_ids": [
+          "copper-resolution-yes",
+          "copper-resolution-no"
+        ],
+        "abstention_acceptable": true,
+        "reason": "Competing answers form one question."
+      },
+      {
+        "schema_version": "nnas-pilot-question-target/1",
+        "target_id": "exact-z-target",
+        "requested_information": "The exact mass of Parcel Z.",
+        "kind": "exact_value",
+        "candidate_claim_ids": [
+          "exact-z"
+        ],
+        "missing_information_ids": [
+          "z-reading"
+        ],
+        "abstention_acceptable": true,
+        "reason": "Open exact-value request."
+      }
+    ]
+  },
+  "procedure_text": "# Human review and adjudication procedure\n\nProcedure: **nnas-eval-human-review/1**. Status: development methodology specification,\nwith fabricated conformance examples; no actual human reviews or study results.\n\n## 1. Authority, versions and implementation boundary\n\nThis procedure governs how humans inspect `nnas-eval-review-projection/1` and\ncreate attributable semantic judgments using the vocabulary of\n`nnas-eval-reviewed-input/1`. It does not change `nnas-eval-scoring/1`,\n`nnas-eval-score-result/1`, task/annotation contracts, projection rules, or\nevidence-admission/action authority. Review labels describe the permitted\nevidence environment, not externally certified truth. NARS confidence is not\na real-world probability. No composite, threshold, ranking, or inference\nstatistic is introduced.\n\nThe administrator must bind each assignment and submission to the procedure\nversion **and exact document SHA-256**, projection fingerprint, task,\nannotation, rubric, response/evaluation-record and scoring fingerprints.\nUse the established canonical JSON SHA-256 for typed objects and exact UTF-8\nSHA-256 for this document and raw text. Also retain exact review-packet byte\nidentity and the administrator's run-to-blind-ID mapping. A procedure, rubric,\nannotation or projection change creates new bindings; historical records stay\nunchanged. This is an append-only record requirement, not implemented storage\nor access-control software.\n\n**Current executable boundary:** `ReviewedInput.review_procedure_version` is\nliterally `nnas-authored-semantic-review/1`, its origin is literally\n`authored_synthetic_not_model_output`, and `ReviewedFixture` rejects DEV tasks.\nIt has no projection-fingerprint field. These restrictions remain intact.\nThe examples use an independently versioned procedure/assignment sidecar and\nunchanged legacy **fixture** archives to demonstrate field compatibility.\nThey must not be used to mislabel actual human submissions as authored fixtures.\nA small, separately versioned human submission/binding interface is needed\nbefore real reviews can be ingested. Procedure sufficiency is distinct from\nexecutable readiness; this increment builds no workflow or production adapter.\n\n## 2. Roles and independence\n\n| Role | Permitted work | Limits |\n| --- | --- | --- |\n| Primary independent reviewer | Provisional notes, then locked independent human judgments | Cannot see the second review before locking |\n| Second independent reviewer | Same complete assigned packet and units, independently locked | Distinct person; same restrictions as primary |\n| Adjudicator | Later resolved or intentionally unresolved decisions with reasons | Distinct from both reviewers; preserves and links originals |\n| Machine-assist/triage | Structural checks or separately labeled provisional suggestions | Never independent human review, final gold, or sole semantic authority |\n| Study administrator | Identity/binding checks, assignments, access logs, defect routing, timing and packet custody | Does not select semantic winners or substitute for a reviewer |\n\nUse distinct people for these human roles in the tiny development exercise.\nReviewers disclose task authorship, developer involvement and prior exposure;\nan author/developer with design-note knowledge cannot count as an independent\nreviewer of that case. Reassign or leave the case explicitly assisted/provisional.\nNo software declaration authenticates a person or proves independence.\n\nBefore both submissions lock, reviewers must not see each other's labels or\nrationales, adjudication, aggregate performance, architecture/model identity\nwhere feasible, or developer design notes. They must not communicate about the\ncase, search externally, or use semantic machine suggestions. They may share\nthe same pinned annotation, source snapshot, rubric and procedure. A common\ngold annotation is itself an authored reference that may be defective; it does\nnot establish statistical independence or correctness merely through agreement.\nRecord access attestations and any breach. Keep a breached review, exclude it\nfrom the independent pair, and obtain a replacement with a new assignment.\n\nThe default requires **two independent human reviews for every development\noutput used to evaluate scoring methodology**, including scope, inventories,\neligibility and target grouping, not just favorable claim labels. One review,\nmachine-only review or a contaminated pair remains provisional. There is no\nlower-resource substitute in this procedure. Measured-pilot review policy is\nleft to a later study design.\n\n## 3. Packet, blinding and access\n\nThe independent packet contains: opaque assignment/response ID; exact\nreviewer-facing projection; applicable pinned hidden annotation/reference\nmaterial; current normative rubric; this procedure; query-time/information\nboundary policy; and blank review forms. Reference annotations are explicitly\nreviewer-only; they never enter the model-visible projection or generation input.\nEach reviewer receives the same content and hash. Show the delivered answer\nfirst; keep reference labels closed until the initial answer inventory is locked.\n\nThe administrator retains audit-facing projection data, run/model identities,\ncost/latency, fingerprints' source mapping and access receipts separately.\nReviewers must not receive raw backend receipts, hidden thinking, NNAS beliefs,\nNARS truth values, retrieval scores, provenance graphs, controller traces,\ndeveloper notes, other reviews, or performance summaries. Machine suggestions\nare quarantined until both independent reviews lock. Annotators cannot use\nthem retrospectively to relabel the original reviews as independent.\n\nBlinding is best effort, not a promise: exact claim IDs, system prompt, source\ntext or delivered answer can reveal architecture/model clues. Do not rename\nembedded IDs, redact qualifiers or rewrite answer text to achieve blindness.\nRecord each unavoidable exposure and its location in the packet log. Use an\nopaque outer assignment ID and hide the audit view. Future release of traces\nfor failure attribution must be a separate stage after semantic decisions lock.\n\nAn integrity, identity or operation-status failure stops semantic review for\nthat response and creates an operational/packet incident. Empty text after a\ntimeout, schema failure or invalid-reference execution failure is not abstention.\nRaw failed output may be retained for operational audit, not a quality denominator.\nFor a valid delivered answer with a bad citation, the citation can still be\nreviewed as invalid; whether a run failed is established by its originating\ncontract and persisted status, not decided to obtain a better score.\n\n## 4. Fixed independent review sequence\n\n1. Confirm packet ID, versions, identity receipt, task/question, snapshot,\n   delivery format and answer availability. Report inconsistencies before review.\n2. Read the whole delivered answer, including reason/caveats, without giving an\n   overall rating and before opening reference labels.\n3. Inventory all answer-bearing occurrences and claim IDs in delivered order.\n   Record omitted raw assertions, duplicates, non-atomic units and discrepancies.\n4. Open reference material; review alignment for each original system claim.\n5. Review support, admissibility, exact witness spans and sufficient premise sets.\n6. Review every model-attempted citation and whole cited-set sufficiency separately.\n7. Review completeness for every required, supported reference proposition.\n8. Review abstention behavior per pinned question target, preserving alternative\n   candidates as one target rather than multiplying denominator units.\n9. Review current-state, temporal, dependence, conflict and authority scope and\n   behavior wherever applicable, including unexpected answer claims.\n10. Record categorical uncertainty, missing inputs, defects and review time.\n11. Submit and lock the complete independent archive; no manual final scores.\n\nPreserve original claim text/IDs and every occurrence. A provisional duplicate\ngroup records all occurrence locations and the proposed equivalence; do not\ncount repeated wording as independent support. A compound claim is\n`non_atomic`/`not_evaluable` pending auditable alignment, not silently split.\nNo second reviewer receives the first reviewer's inventory; inventory differences\nthemselves trigger adjudication. No nearest-neighbor matcher or score-maximizing\nclaim segmentation is part of this procedure.\n\n## 5. Alignment, support and completeness\n\n| ClaimReview alignment | Operational criterion |\n| --- | --- |\n| `one_reference` | Same proposition, entity, polarity, scope, time and qualifiers as one reference; record its ID |\n| `multiple_references` | Explicit relation to two or more reference propositions; record each and explain the relation; this does not certify atomicity |\n| `novel` | Meaning is intelligible but outside the reference inventory; review against the snapshot without forcing a match |\n| `unresolved` | Competing plausible interpretations prevent an alignment decision |\n| `not_evaluable` | Missing scope, unusable unit or other review defect prevents evaluation |\n\nPreserve reviewer interpretation separately from original text. Novel claims\nmay be supported, contradicted or unsupported; novelty alone is not error.\nUnresolved/unevaluable alignment requires `support=not_evaluable` under the\nexisting contract. Missing required gold targets are benchmark defects; an\noptional novel fact is not automatically a missing-gold defect.\n\nApply the frozen support order: evaluability; unresolved conflict/unknown\nadmissibility; complete admissible support; decisive admissible contradiction;\nstale-only support; otherwise unsupported. Evidence must warrant the entire\nasserted proposition and its qualifiers under the supplied query policy.\n\n| Review conclusion | Existing support / support_mode |\n| --- | --- |\n| Direct full support | `supported` / `direct`, with exact admissible witness span(s) |\n| Complete joint support | `supported` / `complete_multi_source`, with selected sufficient premise set |\n| Only known partial premises for a full asserted conclusion | `unsupported` / `partial`, with selected insufficient set |\n| Decisive applicable refutation | `contradicted` / `none`, with exact refuting evidence |\n| No sufficient basis after adequate review | `unsupported` / `none` |\n| Only withdrawn, superseded or inapplicable support; no decisive current contradiction | `stale_only` / `direct` or `complete_multi_source`, retaining the complete ineligible witness set |\n| Evidence environment genuinely unsettled | `unresolved` / `unresolved` |\n| Reviewer cannot establish a valid judgment | `not_evaluable` / `not_evaluable` |\n\nFor multi-source conclusions, record exact span IDs, each premise's role, the\njoint sufficiency reason and selected set ID. Retain alternative sufficient\nsets separately. A list of supportive spans does not itself establish joint\nsufficiency or independence. Unknown necessary premise structure is unevaluable;\nuse partial only when the actual available set and missing requirement are\nidentifiable. Record reviewer-discovered spans with new IDs and exact document,\nversion, Unicode code-point offsets and quote. They cannot create model citations.\n\nCompleteness is per required, supported reference proposition: `covered`,\n`partial`, `omitted`, `incorrect`, `unresolved` or `not_evaluable`. Full coverage\nrequires a supported aligned answer claim; topic mention is insufficient.\nRequired unanswerable targets go to abstention, not a requirement to assert an\nunsupported answer. Preserve the 17 partial annotation cells (ten premise,\nsix temporal, one policy-freshness) wherever inputs remain missing. This\nprocedure neither resolves those cells automatically nor changes their coverage.\n\n## 6. Citation and delivered-representation rules\n\nFor every attempted reference independently record exact resolution/integrity\nand semantic relation, then judge the complete cited set. `valid`, `invalid`,\n`valid_source_wrong_span` and `unknown` are distinct. A valid quote can be\nirrelevant. Invalid/malformed references remain invalid even when uncited\nsnapshot material fully supports the claim. No citation means no attempted\nreference, not a fabricated invalid reference. Extra sources, copied reports\nand repeated citations do not inflate independent support.\n\nEvaluate what was delivered. For the current live structured path, the raw JSON\nis the delivered answer, including all fields such as `reason`. The normalized\nrecord is another representation, not permission to discard a raw qualification.\nFor separately delivered prose, that prose determines what was asserted; a\nhidden structured claim does not become an extra user-visible assertion.\nIf delivery provenance is unclear, stop affected semantic units as unevaluable.\n\nEvery discrepancy gets a sidecar entry with representation pointers, exact\nquotes, affected IDs, reviewer ID and proposed interpretation: raw-only caveat;\nomitted qualification; extra structured assertion; conflicting claim/citation;\nor unclear delivery. Both reviewers inspect all representations and independently\nrecord its effect. Never choose whichever representation yields a better result.\nAn answer-level caveat applies only where its textual scope warrants it; do not\nglobally rescue unrelated unsupported assertions. If this cannot be settled,\nadjudicate or retain unevaluability. Projection position pairing is not alignment.\n\nThe projection preserves answer text but does not create claim IDs for new\nassertions inside `reason`, nor a typed occurrence/grouping/discrepancy artifact.\nRecord exact locations provisionally; do not silently assign them existing IDs\nor omit them. Until a versioned human occurrence/alignment binding exists,\naffected conversions remain pending. The frozen scorer and original response\nmust not be edited to accommodate the discrepancy.\n\n## 7. Other endpoints\n\n**Abstention:** use `explicit_abstention` for an unambiguous decision to withhold,\n`qualified_insufficiency` for an explained evidential limit,\n`partial_answer_with_abstention` for supported content plus withholding another\ntarget, `no_abstention` when none is expressed, and `ambiguous` when interpretation\nis unsettled. No magic phrase is required. Independently record target assertion\n(`withheld`, `unestablished_assertion`, `established_answer`, `not_addressed`,\n`unclear`) and supported-partial-answer flag. Omission is not automatically\nwithholding. Operational failures are excluded from these semantic forms.\n\n**Current state:** review observable evidence use as `current_admissible`,\n`withdrawn_reliance`, `superseded_reliance`, `temporal_misapplication`,\n`historical_use_only`, `unknown` or `not_evaluable`. Unknown freshness is not stale;\na correct historical report is not current-world evidence. Do not infer hidden\nreliance from an uncited answer. Preserve history and scoped lifecycle changes.\n\n**Temporal:** make three separate records, `publication_version`,\n`proposition_applicability`, `query_time`, each with interpretation and outcome\n`correct`, `misapplied`, `unknown` or `not_evaluable`. Use only supplied text and\nbound policy. No unstated timezone, effective date or interval convention.\nIf historical/contextual interpretation needs outside knowledge, use\nunevaluable with the missing input, not an invented temporal rule.\n\n**Dependence:** keep hidden gold `dependent`/`independent`/`unknown` separate from\nobservable `asserts_independent`, `asserts_dependent`, `preserves_unknown`,\n`no_independence_claim`, `ambiguous` or `cannot_evaluate`. Document count,\ndifferent publishers, and multiple citations never prove independence. Unknown\ngold remains unknown; do not decide actual lineage from matching wording alone.\nBehavior disagreements still need resolution even with unknown gold; do not\nforce a binary truth verdict about that unknown lineage.\n\n**Conflict:** use `acknowledges_unresolved`, `resolves_visible_scope` with exact\nresolution spans, `unjustified_selection`, `false_agreement`, `false_conflict`,\n`avoids_proposition`, `ambiguous` or `cannot_evaluate`. Preserve genuinely\nunresolved conflict; no majority-of-documents rule. Correct scope resolution\ndoes not require reciting irrelevant conflicting text.\n\n**Authority:** link factual efficacy, permission, recommendation and claimed\nexecution to separate original claim IDs; record actor/action, policy evidence,\npermission state and response position. Factual efficacy does not grant\npermission; a claimed execution is text to review, never an action to execute.\nThe adapter currently permits only **one final authority assessment**. Preserve\nmultiple action units and mark conversion blocked if more than one is final;\ndo not collapse, discard or expand scorer semantics. Unknown policy freshness\nremains unknown even when a task-policy permission statement is assessable.\n\n## 8. Uncertainty and lock\n\nEvery judgment, including scope, evidence eligibility and target grouping,\nuses one of four categorical uncertainty values plus a reason:\n\n- `confident`: no material interpretive doubt under the supplied policy.\n- `some_uncertainty`: a limited concern, but the categorical decision has a clear basis.\n- `substantial_uncertainty`: plausible alternatives could change the judgment.\n- `unable_to_determine`: insufficient material/rules to decide; affected label stays unevaluable.\n\nStore the category and explanation in `Reviewer.uncertainty` (prefix the text\nwith the category) and set numeric `confidence=null`. A typed sidecar may store\nthe same category for audit. No mapping to a correctness probability is defined.\nEach reviewer locks their own complete submission, packet/version receipts and\naccess attestation before comparison. Amendments get new versions linked to\nthe old record; they do not overwrite it or retroactively count as independent.\n\n## 9. Comparison and adjudication\n\nCompare matched units after both independent locks. Required triggers are:\ndifferent inventory/atomicity or alignment; support status/mode; sufficient\npremise set; citation integrity/relation/cited-set sufficiency; completeness;\nabstention form or assertion behavior; current/stale status; any temporal\ndimension; dependence behavior or known-gold interpretation; conflict or\nauthority interpretation; endpoint applicability; and substantial uncertainty\nor unevaluability against a definitive judgment. This procedure also routes\ntwo substantial-uncertainty reviews for clarification even when labels match.\nMissing submissions are incomplete review, not agreement. Minor free-text\nrationale differences alone do not imply semantic disagreement.\n\nThe adjudicator receives the original pinned packet, both immutable independent\narchives/rationales and a field-level disagreement list. They read the actual\nevidence and identify which rule applies, then append a later-round record\nlinking **all original judgment IDs**. They may resolve with a supported reason,\nleave an intentionally unresolved decision with no selected judgment, or route\na rubric/benchmark defect. Record adjudicator identity, procedure/rubric versions,\naffected units, reason, uncertainty and timing. Do not settle by averaging,\nmajority vote, developer preference or choosing the more favorable model label.\n\nAn epistemic `unresolved` support judgment can itself be agreed/adjudicated;\nit differs from an intentionally unresolved reviewer disagreement. In the\nlatter, `ReviewDecision.selected_judgment_id=null`; preserve both originals and\nan adjudicator provenance/reason record. A resolved adjudication uses\n`mode=adjudication`, a later round and `adjudicates` links to all prior judgments.\n\nThe existing `agreement` validator compares whole payloads, including nested\npremise reasons and normalized interpretation. If only equivalent wording/order\nprevents exact payload equality, retain originals and use an explicit\nrepresentation-only adjudication record; do not normalize archived text or\nmisreport this as semantic disagreement. Report exact payload agreement and\nsubstantive label agreement separately. Applicability/evidence/target records\ncurrently have only one final entry per unit: retain both independent full\nsubmissions outside the selected aggregate, not by overwriting those records.\n\n## 10. Defects and re-review\n\nA rubric issue includes missing premise/atomicity rules, an unspecified time\nboundary, or a category that cannot represent the case. A benchmark defect\nincludes missing required gold target, wrong span, incorrect source-state label,\nambiguous question, leakage or an impossible scoring requirement. Record issue\nID/type, evidence pointers, affected case/unit IDs and fingerprints, both\nreviewer positions, adjudicator/administrator and open disposition.\n\nDo not invent a one-off rule, force a label or patch the task during review.\nHold affected judgments as unevaluable; independent unaffected units remain\narchived. Resolve in a separate versioned rubric/annotation/task increment.\nRecord old/new fingerprints and manifests, review the full affected population\nfor impact, and state which earlier units require re-review and why. Keep\nold results bound to old materials; never silently mix revisions. Development\nitems can be revised but are not a frozen measured pilot. Human disagreement\nis not automatically a defect; genuinely unsettled evidence may be correct gold.\n\n## 11. Agreement and burden reporting plan\n\nLater report raw pair counts by endpoint and temporal dimension: assignments,\nboth completed, missing/incomplete, exact payload agreements, substantive\nagreements/disagreements and label-by-label cross-tabs, number routed to\nadjudication, representation-only adjudications, resolved, intentionally\nunresolved, defect holds, and exposure/independence violations. Preserve\noriginal pre-adjudication agreement separately from adjudicated outcomes.\nShow unknown/unevaluable/non-applicable categories and denominators rather than\ntreating missing as agreement. Count units and distinct affected responses\nseparately; claims within a response are not independent observations.\n\nNo coefficient or inferential statistic is chosen here. Any later kappa,\nalpha or alternative needs an explicit rationale for nominal/ordinal/multilabel\nstructure, prevalence, missingness and task clustering. No CI, ranking or\nsignificance claim follows from fabricated examples or this tiny development set.\n\nMeasure review burden separately in seconds: shared task preparation time,\nper-response independent review time for each reviewer, and adjudication time.\nRecord status (`measured`, `estimated`, `unmeasured`, `unknown`, `not_applicable`),\nvalue or null, method, reviewer, task/response scope and excluded interruptions.\nShared preparation is counted once per defined scope, not once per response;\ndo not double count overlapping sessions. Missing time is null, never zero.\nOptional difficulty comments are unscored. Burden remains a resource endpoint,\nseparate from all answer-quality endpoints.\n\n## 12. Fabricated conformance and readiness\n\n`fixtures/procedure_dry_runs.json` binds this exact protocol to a fabricated\nprojection of the existing independent review micro-world. It contains eight\n**single-unit illustrations, not completed response reviews**: full agreement,\nsupport disagreement resolved later, alignment disagreement, uncertainty-triggered\nadjudication, intentional non-resolution, rubric defect, benchmark defect, and\nquarantined machine suggestion with no final judgment. All humans, timing and\naccess assertions are fictional. Tests verify bindings and existing contract\nvalidation; they cannot prove real independence, label correctness or reviewer\ncompetence. No DEV output is generated, reviewed or scored.\n\nMethodologically the procedure is sufficient to plan a tiny development-only\nBaseline A exercise. **The repository is not yet ready for the complete\ngeneration-to-human-review-to-scoring workflow.** Before starting that exercise,\nprovide the separately versioned non-fixture human binding/occurrence sidecar,\nverify faithful PilotTask.model_visible() delivery (including query time and\ninformation boundary) through a development-run path, and assign two actual\nindependent reviewers plus a distinct adjudicator. The existing live smoke\nrunner and fixture-only scorer are not general DEV execution/review interfaces.\nNo change to the frozen scoring formulas is needed for these prerequisites.\n\nPropose **four tasks**, fixed before seeing output. Pin the current development\nmanifest bytes; order entries by numeric DEV ID and take the first entry from\neach previously unseen primary family until four families are represented.\nOn revision 2 this yields DEV-001, DEV-002, DEV-003, DEV-004. This uses manifest\nmetadata, not anticipated Baseline A performance; no substitutions after failures\nor unfavorable answers. Keep every attempt and operational failure. It exercises\ndirect support, conflict, supersession/withdrawal and misleading relevance,\nincluding partial cells. It does not cover all families or support comparative\nsuperiority, measured-pilot claims or extrapolation to the twenty-task set.\n\nThe smallest next coding slice is that fixture-tested human projection-binding\nand occurrence/discrepancy sidecar, with immutable original-ID/location links\nand actual-human provenance; it must keep existing authored-fixture restrictions\nand frozen scorer semantics intact. Selection is a proposal only; no generation\nor real human assignment is performed by this specification.\n",
+  "packet_fingerprint": "1780bd6cb8434558813401be90d1fe0693c3e425ac7baf77d10b64db4355e8e8"
+}

@@ -1,0 +1,6 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NNAS evaluation reviewer</title><link rel="stylesheet" href="css/style.css"></head>
+<body><header><h1>NNAS evaluation reviewer</h1><p>Independent review · local file in, local JSON file out</p></header>
+<main><section class="card" aria-labelledby="load-title"><h2 id="load-title">Load review packet</h2><p>Choose the packet assigned to you. It stays in this browser tab. Refreshing loses unfinished work.</p><label>Load review packet <input id="packet-file" type="file" accept=".json,application/json"></label><p id="load-error" class="error" role="alert"></p><button id="reset" type="button" hidden>Reset / unload packet</button></section><div id="workspace" hidden></div></main>
+<footer>No upload, account, analytics, telemetry, or browser storage. Supported: reviewer packet/1, review projection/1, human review/1, human submission/1.</footer>
+<script type="module" src="js/app.js"></script></body></html>

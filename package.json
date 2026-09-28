@@ -1,0 +1,1 @@
+{"name":"nnas-eval-reviewer","private":true,"type":"module","scripts":{"test":"node --test tests/*.test.js","compat":"python3 tests/compat.py"}}
