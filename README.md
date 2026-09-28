@@ -20,11 +20,13 @@ For local verification, point `NNAS_MAIN` to the main repository and consult `ev
 
 1. Open the site and select **Load review packet**. Enter the pseudonymous ID printed on your assignment. No account, real name, or email is needed.
 2. Read the exact raw delivered answer and structured answer. Select any raw assertions, qualifications, or authority statements in the read-only text box and record them as Unicode spans. Lock the occurrence inventory.
-3. Open pinned reference material. Inspect the visible source panel and exact source spans. Record any raw/structured discrepancy without deciding which representation wins.
+3. Open pinned reference material. The read-only **Complete imported packet** section then displays every packet field, including the procedure text and pinned annotation. Inspect the visible source panel and exact source spans. Record any raw/structured discrepancy without deciding which representation wins.
 4. Review evidence eligibility, claims, citations, required reference coverage, question targets, and applicable secondary endpoints. Every judgment binds one or more exact answer occurrences. A selected `unable_to_determine`, `unknown`, or `not_evaluable` value is an intentional category; a blank required item blocks finalization.
 5. Read the completion list, choose overall uncertainty, provide notes, and select **Finalize review**. The summary becomes read only. Select **Download submission JSON** and return the file through the administrator's approved channel.
 
 The interface follows the protocol's answer-first ordering. It does not accept peer submissions or provide an adjudication mode. A browser refresh or reset loses unfinished work.
+
+The authoritative procedure text in current assignments names Baseline A. Because the interface displays all packet fields, the reviewer can see that label after locking the answer inventory. The administrator should account for this limit when describing reviewer blinding.
 
 ## Privacy and integrity
 

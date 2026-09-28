@@ -23,7 +23,7 @@ file.addEventListener('change',async()=>{error.textContent='';try{if(!file.files
 resetButton.addEventListener('click',()=>{draft=reset();file.value='';error.textContent='';workspace.replaceChildren();workspace.hidden=true;resetButton.hidden=true;});
 
 function render(){if(!draft)return;workspace.replaceChildren();const p=draft.packet,v=p.reviewer_view,a=p.hidden_annotation;
-  if(draft.finalized){const summary=card('Finalized review — read only',workspace);note(summary,`Task ${p.binding.task_id} · reviewer ${draft.reviewerId} · ${draft.finalized.judgments.length} judgments · ${draft.finalized.evidence.length} evidence spans · ${draft.finalized.occurrences.length} occurrences · ${draft.finalized.discrepancies.length} discrepancies`);const list=el('ul');for(const row of draft.finalized.judgments)list.append(el('li',`${row.judgment.payload.kind} · ${row.judgment.unit_id}${row.judgment.dimension?' · '+row.judgment.dimension:''}: ${row.judgment.reason}`));summary.append(list);note(summary,`Overall uncertainty: ${draft.finalized.uncertainty}. ${draft.finalized.reason}`);button(summary,'Download submission JSON',download);return;}
+  if(draft.finalized){const summary=card('Finalized review — read only',workspace);note(summary,`Task ${p.binding.task_id} · reviewer ${draft.reviewerId} · ${draft.finalized.judgments.length} judgments · ${draft.finalized.evidence.length} evidence spans · ${draft.finalized.occurrences.length} occurrences · ${draft.finalized.discrepancies.length} discrepancies`);const list=el('ul');for(const row of draft.finalized.judgments)list.append(el('li',`${row.judgment.payload.kind} · ${row.judgment.unit_id}${row.judgment.dimension?' · '+row.judgment.dimension:''}: ${row.judgment.reason}`));summary.append(list);note(summary,`Overall uncertainty: ${draft.finalized.uncertainty}. ${draft.finalized.reason}`);button(summary,'Download submission JSON',download);renderPacketFields(p);return;}
   const intro=card('Assignment and first read',workspace);note(intro,`Assignment ${p.assignment_id} · task ${p.binding.task_id} · packet ${p.packet_fingerprint}`);
   const rid=textInput(intro,'Assigned pseudonymous reviewer ID',draft.reviewerId);rid.addEventListener('input',()=>draft.reviewerId=rid.value.trim());
   const role=select(intro,'Assigned independent role',[['primary_independent','Primary independent reviewer'],['second_independent','Second independent reviewer']],draft.role);role.addEventListener('change',()=>draft.role=role.value);
@@ -40,6 +40,7 @@ function render(){if(!draft)return;workspace.replaceChildren();const p=draft.pac
   button(inventory,draft.inventoryLocked?'Inventory locked':'Lock occurrence inventory',()=>{draft.inventoryLocked=true;render();},draft.inventoryLocked?'secondary':'');
   if(!draft.inventoryLocked)return;
   const refs=card('Reference material',workspace);if(!draft.referencesOpened){note(refs,'Open pinned reference labels after locking the answer inventory.');button(refs,'Open reference material',()=>{draft.referencesOpened=true;render();});return;}
+  renderPacketFields(p);
   const columns=el('div','','grid');workspace.append(columns);const sources=el('div','','card sticky');sources.append(el('h2','Visible sources and pinned spans'));columns.append(sources);
   for(const d of v.model_visible_context){sources.append(el('h3',`${d.document_id} · ${d.version} · ${d.source_event_id}`));sources.append(el('div',d.text,'source'));for(const s of a.spans.filter(x=>x.document_id===d.document_id&&x.version===d.version))sources.append(el('p',`${s.span_id} [${s.start}, ${s.end}): ${s.quote}`,'tag'));}
   const right=el('div');columns.append(right);const references=card('Model references and discrepancies',right);
@@ -58,6 +59,16 @@ function render(){if(!draft)return;workspace.replaceChildren();const p=draft.pac
   const reason=textInput(final,'Review notes and rationale',draft.reason,true);reason.addEventListener('input',()=>draft.reason=reason.value);
   const gaps=missing(draft);final.append(el('h3',`Required items remaining: ${gaps.length}`));const list=el('ul','','summary');gaps.forEach(x=>list.append(el('li',x)));final.append(list);
   if(draft.finalized){final.append(el('h3','Final read-only review summary'));note(final,`${draft.finalized.judgments.length} judgments · ${draft.finalized.evidence.length} evidence spans · ${draft.finalized.occurrences.length} occurrences · ${draft.finalized.discrepancies.length} discrepancies`);button(final,'Download submission JSON',download);}else button(final,'Finalize review',async()=>{try{draft.finalized=await makeSubmission(draft);render();}catch(e){alert(e.message);render();}});
+}
+
+function renderPacketFields(packet){
+  const section=card('Complete imported packet — read only',workspace);
+  note(section,'Expand any field to inspect its exact imported value. The procedure text may identify the evaluation baseline.');
+  for(const [name,value] of Object.entries(packet)){
+    const field=el('details','','unit');field.append(el('summary',name));
+    field.append(el('pre',typeof value==='string'?value:JSON.stringify(value,null,2),'exact'));
+    section.append(field);
+  }
 }
 
 function renderSpan(parent,s){const d=draft.spanReviews[s.span_id]||{},section=el('details','','unit');section.append(el('summary',`${s.span_id}: ${s.quote}${d.complete?' ✓':''}`));parent.append(section);
